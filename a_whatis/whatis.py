@@ -62,8 +62,8 @@ def lrn_basic():
     a = 'ABBC'
     b = a
     a = 'XYZ'
-    print(b)    # ABBC
-    print(a)    # XYZ
+    print(b)  # ABBC
+    print(a)  # XYZ
 
     # 常量
     pi = 3.14159
@@ -83,7 +83,7 @@ def lrn_basic():
         位运算符：   &   |   ^   ~   <<      >>
         成员运算符：  in      not in
         身份运算符： is       is not        
-        
+
     '''
     ll = "a"
     ls = ["a", "b", "c"]
@@ -91,11 +91,11 @@ def lrn_basic():
     # is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。
     a = [1, 2, 3, 4]
     b = a
-    print(b is a)       # True
-    print(b == a)       # True
+    print(b is a)  # True
+    print(b == a)  # True
     b = a[:]
-    print(b is a)       # False
-    print(b == a)       # True
+    print(b is a)  # False
+    print(b == a)  # True
 
 
 # 字符串和编码
@@ -124,7 +124,7 @@ def lrn_str():
         %x 十六进制数字
     '''
     print("I'm %s" % "Hello world")
-    print("I'm {0}, want to {1} ！" .format("小明", "say hello world"))
+    print("I'm {0}, want to {1} ！".format("小明", "say hello world"))
 
 
 # 列表
@@ -132,24 +132,24 @@ def lrn_list():
     print("output for list")
     classes = ["T1", "T2", "T3"]
     # 长度
-    print(len(classes))                 # 3
+    print(len(classes))  # 3
     # 索引,索引可正可负，-1从最后一个元素开始
-    print(classes[-1], classes[0])      # T3 T1
+    print(classes[-1], classes[0])  # T3 T1
     # print(classes[3])                   # IndexError: list index out of range
 
     # 增删改
     classes.insert(1, "IOT")
-    print(classes)                      # ['T1', 'IOT', 'T2', 'T3']
+    print(classes)  # ['T1', 'IOT', 'T2', 'T3']
     classes.pop(1)
-    print(classes)                      # ['T1', 'T2', 'T3']
+    print(classes)  # ['T1', 'T2', 'T3']
     classes[1] = "IOT"
-    print(classes)                      # ['T1', 'IOT', 'T3']
+    print(classes)  # ['T1', 'IOT', 'T3']
 
     # 元素可可以不同类型，可以为list
     s = ["Tom", 1, True]
-    print(s)                            # ['Tom', 1, True]
+    print(s)  # ['Tom', 1, True]
     s = ["Tom", ["ada", 12, False], True]
-    print(s)                            # ['Tom', ['ada', 12, False], True]
+    print(s)  # ['Tom', ['ada', 12, False], True]
 
 
 # 元组
@@ -158,24 +158,24 @@ def lrn_tuple():
 
     # tuple类似list，一旦初始化后不可修改
     groups = ()  # 空tuple
-    print(groups)               # ()
+    print(groups)  # ()
 
     # 定义tuple
     groups = ("T1", "T2", "T3")
-    print(groups)               # ('T1', 'T2', 'T3')
+    print(groups)  # ('T1', 'T2', 'T3')
 
     # 要定义只有一个元素的tuple，必须加(,)，同样的，输出时，print也会加
     groups = (1,)
-    print(groups)               # (1,)
+    print(groups)  # (1,)
     # 下面的情况会被解析为小括号，而不是tuple
     groups = (1)
-    print(groups)               # 1
+    print(groups)  # 1
 
     # tuple中包含list
     groups = ("T1", ["IOT", "WIFI"], "T2")
-    print(groups)               # ('T1', ['IOT', 'WIFI'], 'T2')
+    print(groups)  # ('T1', ['IOT', 'WIFI'], 'T2')
     groups[1].insert(1, "NETWORK")
-    print(groups)              # ('T1', ['IOT', 'NETWORK', 'WIFI'], 'T2')
+    print(groups)  # ('T1', ['IOT', 'NETWORK', 'WIFI'], 'T2')
 
 
 def lrn_condition():
@@ -193,7 +193,7 @@ def lrn_condition():
 
 # 输入输出
 def lrn_io():
-    age_s = input("birth: ")      # input返回一个string类型的值
+    age_s = input("birth: ")  # input返回一个string类型的值
     age = int(age_s)
     print("age is %d" % age)
 
@@ -218,12 +218,12 @@ def lrn_loop():
     s = 0
     index = 0
     while index < 200:
-        index += 1            # 如果放到continue的后面，灾难就发生了
+        index += 1  # 如果放到continue的后面，灾难就发生了
         if index == 50:
-            continue        # continue跳过当次循环, 总和要减去50，index=50没有执行加和
+            continue  # continue跳过当次循环, 总和要减去50，index=50没有执行加和
         s += index
         if index >= 100:
-            break           # break跳出当前循环，后续条件都不再执行
+            break  # break跳出当前循环，后续条件都不再执行
     print(s)
 
 
@@ -240,19 +240,19 @@ def lrn_dict():
 
     # 直接以key-value形式定义一个字典
     d = {'T1': 7, 'T2': 12, "T3": 11, 'IOT': 6}
-    print(d, d['T2'])       # {'T1': 7, 'T2': 12, 'T3': 11, 'IOT': 6} 12
+    print(d, d['T2'])  # {'T1': 7, 'T2': 12, 'T3': 11, 'IOT': 6} 12
 
     # 以key=value的形式追加定义
     d["WIFI"] = 34
-    print(d, d['WIFI'])       # {'T1': 7, 'T2': 12, 'T3': 11, 'IOT': 6, 'WIFI': 34} 34
+    print(d, d['WIFI'])  # {'T1': 7, 'T2': 12, 'T3': 11, 'IOT': 6, 'WIFI': 34} 34
 
     # 避免key不存在的方法
     # 先判断后使用
     if 'WIFI' in d:
         print(d['WIFI'])
     # 使用dict的get方法
-    print(d.get("NETWORK"))       # 如果不存在，返回None
-    print(d.get("NETWORK", -1))   # 如果不存在，返回-1， 此处的值可以自定义
+    print(d.get("NETWORK"))  # 如果不存在，返回None
+    print(d.get("NETWORK", -1))  # 如果不存在，返回-1， 此处的值可以自定义
 
 
 def lrn_set():
@@ -261,14 +261,14 @@ def lrn_set():
     set和dict类似，也是一组key的集合，但不存储value,key不能重复
     '''
     # 定义一个set需要一个list
-    s = set([1, 2, 3, 4])               # {1, 2, 3, 4}
+    s = set([1, 2, 3, 4])  # {1, 2, 3, 4}
     print(s)
-    s = set([1, 2, 2, 3, 4])            # {1, 2, 3, 4}
+    s = set([1, 2, 2, 3, 4])  # {1, 2, 3, 4}
     print(s)
     s.add(4)
-    print(s)                            # {1, 2, 3, 4}
+    print(s)  # {1, 2, 3, 4}
     s.remove(4)
-    print(s)                            # {1, 2, 3}
+    print(s)  # {1, 2, 3}
 
 
 # 函数定义
@@ -278,24 +278,26 @@ def lrn_func():
         定义函数以def开头，括号后写形参
         参数个数不一致会报错，但参数类型不一致需要自行检查
         不写return相当于return None，可简写为return
-        
+
     '''
 
     # 参数传递
     def my_abs(x):
-        if not isinstance(x, (float, int)):             # 检查参数类型
-            raise TypeError("bad operand type")      # 触发参数类型错误
+        if not isinstance(x, (float, int)):  # 检查参数类型
+            raise TypeError("bad operand type")  # 触发参数类型错误
         if x >= 0:
             return x
         else:
             return -x
+
     print(my_abs(12))
     print(my_abs(-1))
+
     # my_abs('a')
 
     # 空函数
     def my_empty():
-        pass                # pass什么都不做，保证函数可以跑通，在最初定架构的时候可以用
+        pass  # pass什么都不做，保证函数可以跑通，在最初定架构的时候可以用
 
     my_empty()
 
@@ -304,6 +306,7 @@ def lrn_func():
         fir = "first arg"
         sec = "second arg"
         return fir, sec
+
     a, b = my_multi_value()
     print(a, b)
 
@@ -311,7 +314,7 @@ def lrn_func():
     def product(x):
         return x * x
 
-    print(product(2))       # 2*2 =  4
+    print(product(2))  # 2*2 =  4
 
     # 默认参数
     # 必选参数在前，默认参数在后
@@ -323,8 +326,9 @@ def lrn_func():
             s *= x
             n -= 1
         return s
-    print("2*2 = ", product(2))                 # 2*2 =  4
-    print("power(2, 3) = ", product(2, 3))       # power(2, 3) =  8
+
+    print("2*2 = ", product(2))  # 2*2 =  4
+    print("power(2, 3) = ", product(2, 3))  # power(2, 3) =  8
 
     # 可变参数*numbers，函数内部得到的是个tuple
     def calc(*nbs):
@@ -333,16 +337,17 @@ def lrn_func():
             my_s = my_s + n
         return my_s
 
-    print("1+2+3 = ", calc(1, 2, 3))        # 1+2+3 =  6
-    print("1+2 = ", calc(1, 2))             # 1+2 =  3
+    print("1+2+3 = ", calc(1, 2, 3))  # 1+2+3 =  6
+    print("1+2 = ", calc(1, 2))  # 1+2 =  3
     numbers = [1, 2, 3]
-    print("1+2+3 = ", calc(*numbers))       # 1+2+3 =  6
+    print("1+2+3 = ", calc(*numbers))  # 1+2+3 =  6
 
     # 关键字参数
     # 允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict
-    def person(name, age, **kw):    # name, age 为位置参数， kw为关键字参数
+    def person(name, age, **kw):  # name, age 为位置参数， kw为关键字参数
         print("name: ", name, "age: ", age, "other: ", kw)
-    person("Tom", 15)                                               # name:  Tom age:  15 other:  {}
+
+    person("Tom", 15)  # name:  Tom age:  15 other:  {}
     # name:  Tom age:  15 other:  {'city': 'Shanghai', 'job': 'Engineer'}
     person("Tom", 15, city="Shanghai", job="Engineer")
     my_kw = {'city': 'Shanghai', 'job': 'Engineer'}
@@ -373,10 +378,10 @@ def lrn_func():
     def f1(x, y, z=0, *args, **kw):
         print('x =', x, 'y =', y, 'z =', z, 'args =', args, 'kw =', kw)
 
-    f1(1, 2, 3, 'a', 'b')       # a = 1 b = 2 c = 3 args = ('a', 'b') kw = {}
+    f1(1, 2, 3, 'a', 'b')  # a = 1 b = 2 c = 3 args = ('a', 'b') kw = {}
     my_args = (1, 2, 3, 4)
     my_kw = {'d': 99, 'x': '#'}
-    f1(*my_args, **my_kw)             # a = 1 b = 2 c = 3 args = (4,) kw = {'d': 99, 'x': '#'}
+    f1(*my_args, **my_kw)  # a = 1 b = 2 c = 3 args = (4,) kw = {'d': 99, 'x': '#'}
 
     # 递归函数
     # 函数内部调用自身
@@ -384,9 +389,9 @@ def lrn_func():
     def my_sum(n):
         if 1 >= n:
             return 1
-        return sum(n-1) + n
+        return sum(n - 1) + n
 
-    print("1+2+3 = ", my_sum(3))   # 1+2+3 =  6
+    print("1+2+3 = ", my_sum(3))  # 1+2+3 =  6
 
     # 解决递归调用栈溢出的方法是通过尾递归优化
     # 尾递归是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式
@@ -397,9 +402,9 @@ def lrn_func():
     def sum_iter(x, y):
         if 1 >= x:
             return y
-        return sum_iter(x-1, x+y)
+        return sum_iter(x - 1, x + y)
 
-    print("1+2+3 = ", my_sum(3))   # 1+2+3 =  6
+    print("1+2+3 = ", my_sum(3))  # 1+2+3 =  6
 
 
 # usage
@@ -413,19 +418,18 @@ def lrn_usage():
 
 
 funcs = [
-    ["basic",      lrn_basic,          "基础语法"],
-    ["str",      lrn_str,          "字符串"],
-    ["list",        lrn_list,         "列表"],
-    ["tuple",       lrn_tuple,        "元组"],
-    ["condition",   lrn_condition,    "条件判断"],
-    ["loop",        lrn_loop,        "循环"],
-    ["dict",        lrn_dict,       "字典"],
-    ["function",    lrn_func,        "函数"],
-    ["highorder_list",    higher.lrn_higher_list,        "高阶特性"],
-    ["highorder_func",    higher.lrn_higher_func,        "高阶函数"],
-    ["usage",       lrn_usage,       "用法说明"]
+    ["basic", lrn_basic, "基础语法"],
+    ["str", lrn_str, "字符串"],
+    ["list", lrn_list, "列表"],
+    ["tuple", lrn_tuple, "元组"],
+    ["condition", lrn_condition, "条件判断"],
+    ["loop", lrn_loop, "循环"],
+    ["dict", lrn_dict, "字典"],
+    ["function", lrn_func, "函数"],
+    ["highorder_list", higher.lrn_higher_list, "高阶特性"],
+    ["highorder_func", higher.lrn_higher_func, "高阶函数"],
+    ["usage", lrn_usage, "用法说明"]
 ]
-
 
 # main
 if __name__ == "__main__":

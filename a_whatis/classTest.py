@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
+__author__ = "Kingrumn"
+
 r'''
     类： 类和实例，访问控制，继承、多态
 '''
-
-__author__ = "Kingrumn"
 
 import types
 
