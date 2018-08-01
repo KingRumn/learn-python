@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-     # 指明了编码格式，否则中文无法正常输出
 # 文件名【字母/数字/下划线】.py
 
+import higher
+
 
 # 数据类型
 def lrn_basic():
@@ -419,6 +421,8 @@ funcs = [
     ["loop",        lrn_loop,        "循环"],
     ["dict",        lrn_dict,       "字典"],
     ["function",    lrn_func,        "函数"],
+    ["highorder_list",    higher.lrn_higher_list,        "高阶特性"],
+    ["highorder_func",    higher.lrn_higher_func,        "高阶函数"],
     ["usage",       lrn_usage,       "用法说明"]
 ]
 
